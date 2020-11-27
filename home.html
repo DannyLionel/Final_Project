@@ -22,14 +22,41 @@
     <!-- Navigation Bar-->
     <nav class="navbar navbar-light bg-light">
         <a href = "home.html" class = "navbar-brand">M2X</a>
-        <a href ="https://phonebookstore.netlify.app/" class = "nav-link">Phone Store</a>
         <ul class = "navbar-nav">
             <li class = "nav-item">
                 <a href ="#" class = "nav-link"><ion-icon size ="large" name="cart-outline" onclick= "location.href = 'purchaseReview.html'"></ion-icon><span id ="productNum">0</span></a>
             </li>
-          
         </ul>
-    </nav>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          </div>
+        </nav>
+
 
     <!-- Carousel-->
     <div class = "mx-auto">
@@ -70,8 +97,8 @@
             <div class = "row">
                 <div class = "col-md-4 my-4">
                     <div class = "card item">
-                        <div class = "card-text-center">
-                            <img src = "images/item1.jpg" class = "card-img-top">
+                        <div class = "card-text-center" >
+                            <img src = "images/item1.jpg" class = "card-img-top" data-toggle="modal" data-target="#item1">
                             <div class = "card-body">
                                 <h5 class = "text-center">NVIDIA RTX 3090- $1500</h5>
                                 <div class = "col text-center">
@@ -84,7 +111,7 @@
                 <div class = "col-md-4 my-4">
                     <div class = "card item">
                         <div class = "card-text-center">
-                            <img src = "images/item2.jpg" class = "card-img-top">
+                            <img src = "images/item2.jpg" class = "card-img-top" data-toggle="modal" data-target="#item2">
                             <div class = "card-body">
                                 <h5 class = "text-center">NVIDIA RTX 3080 - $700</h5>
                                 <div class = "col text-center">
@@ -97,7 +124,7 @@
                 <div class = "col-md-4 my-4">
                     <div class = "card item">
                         <div class = "card-text-center">
-                            <img src = "images/item3.jpg" class = "card-img-top">
+                            <img src = "images/item3.jpg" class = "card-img-top" data-toggle="modal" data-target="#item3">
                             <div class = "card-body">
                                 <h5 class = "text-center">NVIDIA RTX 3070 - $500</h5>
                                 <div class = "col text-center">
@@ -110,7 +137,7 @@
                 <div class = "col-md-4 my-4">
                     <div class = "card item">
                         <div class = "card-text-center">
-                            <img src = "images/item4.jpg" class = "card-img-top">
+                            <img src = "images/item4.jpg" class = "card-img-top" data-toggle="modal" data-target="#item4">
                             <div class = "card-body">
                                 <h5 class = "text-center">NVIDIA RTX 2080 TI - $450</h5>
                                 <div class = "col text-center">
@@ -123,7 +150,7 @@
                 <div class = "col-md-4 my-4">
                     <div class = "card item">
                         <div class = "card-text-center">
-                            <img src = "images/item5.jpg" class = "card-img-top">
+                            <img src = "images/item5.jpg" class = "card-img-top" data-toggle="modal" data-target="#item5">
                             <div class = "card-body">
                                 <h5 class = "text-center">NVIDIA RTX 2070 Super - $375</h5>
                                 <div class = "col text-center">
@@ -136,7 +163,7 @@
                 <div class = "col-md-4 my-4">
                     <div class = "card item">
                         <div class = "card-text-center">
-                            <img src = "images/item6.jpg" class = "card-img-top">
+                            <img src = "images/item6.jpg" class = "card-img-top" data-toggle="modal" data-target="#item6" >
                             <div class = "card-body">
                                 <h5 class = "text-center">NVIDIA RTX 2060 - $330</h5>
                                 <div class = "col text-center">
@@ -148,6 +175,139 @@
                 </div>
             
         </div>
+
+        
+        <!-- Modal for item 1 -->
+        <div class="modal fade" id="item1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">NVIDIA RTX 3090</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                <p>The GeForce RTX™ 3090 is a big ferocious GPU (BFGPU) with TITAN class performance. It’s powered by Ampere—NVIDIA’s 2nd gen RTX architecture—doubling down on ray tracing and AI performance with enhanced Ray Tracing (RT) Cores, Tensor Cores, and new streaming multiprocessors. 
+                    Plus, it features a staggering 24 GB of G6X memory, all to deliver the ultimate gaming experience.</p>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Modal for item 2 -->
+        <div class="modal fade" id="item2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">NVIDIA RTX 3080</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                <p>The GeForce RTX™ 3080 delivers the ultra performance that gamers crave, powered by Ampere—NVIDIA’s 2nd gen RTX architecture. 
+                    It’s built with enhanced RT Cores and Tensor Cores, new streaming multiprocessors, and superfast G6X memory for an amazing gaming experience.</p>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Modal for item 3 -->
+        <div class="modal fade" id="item3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">NVIDIA RTX 3070</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                <p>The GeForce RTX™ 3070 is powered by Ampere—NVIDIA’s 2nd gen RTX architecture. Built with enhanced Ray Tracing Cores and Tensor Cores, new streaming multiprocessors, 
+                    and high-speed G6 memory, it gives you the power you need to rip through the most demanding games.</p>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Modal for item 4 -->
+        <div class="modal fade" id="item4" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">NVIDIA RTX 2080TI</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                <p>The NVIDIA® GeForce® RTX 2080 Ti graphics card is built for gaming realism and performance. Its powerful NVIDIA Turing™ GPU architecture, breakthrough technologies, 
+                    and 11 GB of next-gen, ultra-fast GDDR6 memory make it an ultimate gaming GPU</p>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Modal for item 5 -->
+        <div class="modal fade" id="item5" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">NVIDIA RTX 2070 SUPER™</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                <p>The NVIDIA® GeForce® RTX 2070 SUPER™ is powered by the NVIDIA Turing™ architecture and has a superfast GPU with more cores 
+                    and faster clocks to unleash your creative productivity and gaming dominance. It’s time to gear up and get super powers. </p>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Modal for item 6 -->
+        <div class="modal fade" id="item6" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">NVIDIA RTX 2060</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                <p>The GeForce RTX™ 2060 is powered by the NVIDIA Turing™ architecture, 
+                    bringing incredible performance and the power of real-time ray tracing and AI to the latest games and to every gamer. RTX. It’s On. </p>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+
+
+
+
+
 
         
 <!--Icons Packages-->

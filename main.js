@@ -302,17 +302,15 @@ function setCartInfo()
 function checkCart() 
 {
     const btnNext = document.getElementById("btnNext")
-    if (localStorage.getItem("cartNum")==0 ||localStorage.getItem("cartNum")==null)
-    {
-        if (btnNext != null)
+    if (btnNext != null)
         {
-            btnNext.disabled = true;
+        if (localStorage.getItem("cartNum")==0 ||localStorage.getItem("cartNum")==null)
+            {
+                btnNext.disabled = true;
+            }
+        else 
+        {
+            btnNext.disabled = false;
         }
     }
-    else 
-    {
-        btnNext.disabled = false;
-    }
 }
-
-

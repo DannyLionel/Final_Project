@@ -25,7 +25,7 @@
             </li>
         </ul>
     </nav>
-    <form action = "sendData.php" method ="POST" >
+    <form action = "sendData.php" onsubmit = "return validateForm()" method ="POST">
         <div>
           <body>
             <div class = "container-fluid" id='shipAdd'>
@@ -56,7 +56,7 @@
                   </div> 
                   <div class = "col-sm-2 mb-3">
                     <label for ="postal" class ="form-label">Postal Code</label>
-                    <input type ="text" class ="form-control textbox" id = "SApost "name = "SApost"></input>
+                    <input type ="text" class ="form-control textbox" id = "SApost"name = "SApost"></input>
                   </div>   
                 </div>
             </div>
